@@ -16,8 +16,11 @@
       </button>
     </div>
 
+    <!-- Loading -->
+    <Loading v-if="$fetchState.pending" />
+
     <!-- Movies -->
-    <div class="container movies">
+    <div v-else class="container movies">
       <!-- Searched Movies -->
       <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
         <div class="movie" v-for="(movie, index) in searchedMovie" :key="index">
