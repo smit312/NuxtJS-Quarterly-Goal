@@ -20,7 +20,7 @@
             new Date(movie.release_date).toLocaleString('en-us', {
               month: 'long',
               day: 'numeric',
-              year: 'numeric',
+              year: 'numeric',                                                                                                       
             })
           }}
         </p>
