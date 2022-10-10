@@ -112,6 +112,7 @@ export default {
     }
     await this.searchMovies()
   },
+  fetchDelay: 1000,
   methods: {
     async getMovies() {
       const data = axios.get(
@@ -122,6 +123,7 @@ export default {
       result.data.results.forEach((movie) => {
         this.movies.push(movie)
       })
+      // console.log('hi')
       // console.log('movies', this.movies)
     },
     async searchMovies() {
