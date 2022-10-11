@@ -20,7 +20,7 @@
             new Date(movie.release_date).toLocaleString('en-us', {
               month: 'long',
               day: 'numeric',
-              year: 'numeric',                                                                                                       
+              year: 'numeric',
             })
           }}
         </p>
@@ -46,9 +46,14 @@
 import axios from 'axios'
 export default {
   name: 'single-movie',
+  head() {
+    return {
+      title: this.movie.title,
+    }
+  },
   data() {
     return {
-      movie: null,
+      movie: '',
     }
   },
   async fetch() {
