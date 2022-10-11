@@ -2,6 +2,7 @@
    command = "npm run dev"
 
 [build]
+  base="movie-app/movieapp"
   command = "npm run generate"
   publish = "dist"
   functions = "functions"
