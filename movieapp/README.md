@@ -1,5 +1,7 @@
 # movieapp
-
+### source and links 
+source : https://www.youtube.com/watch?v=IzLIXyZkKAA&ab_channel=JohnKomarnicki
+Deploy link : https://movie-detailapp.netlify.app
 ## Build Setup
 
 ```bash
