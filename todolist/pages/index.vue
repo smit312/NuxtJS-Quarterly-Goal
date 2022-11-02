@@ -1,9 +1,37 @@
 <template>
-  <div>Hello, World!</div>
+  <main>
+    <h1>Task Board</h1>
+    <p>Create a list of tasks</p>
+    <div class="create-new">
+      <input
+        type="text"
+        v-model="newTask"
+        placeholder="add a new task"
+        @keypress.enter="addTask"
+      />
+      <button @click="addTask">Add</button>
+    </div>
+    <div class="tasks">
+      <Task v-for="task in $store.state.tasks" :key="task.id" :task="task" />
+    </div>
+  </main>
 </template>
 
 <script>
 export default {
   name: "IndexPage",
+  data() {
+    return {
+      newTask: "",
+    };
+  },
+  methods: {
+    addTask() {
+      if (this.newTask) {
+        this.$store.commit("ADD_TASK", this.newTask);
+        this.newTask = "";
+      }
+    },
+  },
 };
 </script>
