@@ -16,7 +16,7 @@
       </button>
     </div>
 
-    <!-- Loading -->
+    <!-- Loading Component-->
     <Loading v-if="$fetchState.pending" />
 
     <!-- Movies -->
